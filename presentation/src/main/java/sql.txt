@@ -1,0 +1,24 @@
+
+
+SQL:
+
+SELECT * FROM Student - получить все данные из таблицы "Student"
+SELECT id, name FROM Student - получить все данные из колонок id и name из таблицы "Student"
+SELECT * FROM Student WHERE age > 20 - получить все данные, где возраст больше 20
+SELECT * FROM Student WHERE age > 20 AND ... - если нужно несколько условий
+SELECT * FROM Student WHERE name LIKE 'N' - получить все данные, где в name есть 'N'
+SELECT * FROM Student WHERE name LIKE 'N' ORDER BY name - получить все данные, где в name есть 'N' и сортировать по имени
+
+
+SELECT * FROM Student INNER JOIN Country ON id_c = Country.id - объединить таблицу Student с Country по полю id_c = Country.id,
+если что-то не совпадает, то данные будут исключены из результата
+
+SELECT * FROM Student LEFT JOIN Country ON id_c = Country.id - если что-то не совпадает, то данные будут null
+за основу берет левую таблицу
+
+SELECT * FROM Student RIGHT JOIN Country ON id_c = Country.id - будет все, что есть в таблице Country и то, что попадет из Student
+за основу берет правую таблицу
+
+CREATE TABLE Student
+UPDATE
+INSERT INTO

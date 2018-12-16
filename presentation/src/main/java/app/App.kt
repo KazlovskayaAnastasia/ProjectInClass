@@ -33,6 +33,7 @@ class App : Application(), HasActivityInjector {
         appComponent = DaggerAppComponent.builder()
                 .application(this)
                 .build()
+                .inje
         appComponent.inject(this)
 
         //Fabric.with(this, Crashlytics())

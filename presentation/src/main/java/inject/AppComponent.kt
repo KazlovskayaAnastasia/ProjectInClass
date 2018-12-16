@@ -17,7 +17,7 @@ interface AppComponent {
     interface Builder{
 
         @BindsInstance
-        fun application(application: App)
+        fun application(application: App): Builder
 
         fun build():AppComponent
     }
